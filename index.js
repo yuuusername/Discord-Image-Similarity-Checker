@@ -17,7 +17,7 @@ const client = new Client({
 
 const CHANNEL_ID = process.env.CHANNEL_ID;
 
-const db = new sqlite3.Database('./image_hashes.db');
+const db = new sqlite3.Database('./data/image_hashes.db');
 
 db.serialize(() => {
   db.run(`
@@ -61,7 +61,8 @@ client.on('messageCreate', async (message) => {
             if (distance <= threshold) {
               duplicateFound = true;
               const originalMessageUrl = `https://discord.com/channels/${message.guild.id}/${message.channel.id}/${row.message_id}`;
-              message.channel.send(`Similar image detected! Original post: ${originalMessageUrl}`);
+              message.channel.send(`# YOU JUST SENT AN IMAGE THAT WAS ALREADY SENT BEFORE
+                > Original post: ${originalMessageUrl}`);
               break;
             }
           }
