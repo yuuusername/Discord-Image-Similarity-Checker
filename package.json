@@ -1,0 +1,20 @@
+{
+  "name": "discord-image-similarity-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "yuuusername",
+  "license": "MIT",
+  "description": "A simple discord bot that can detect similar images in its database",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5",
+    "imghash": "^0.0.6",
+    "jimp": "^0.16.1",
+    "sqlite3": "^5.1.7"
+  }
+}
