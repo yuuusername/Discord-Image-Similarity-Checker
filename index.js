@@ -56,12 +56,12 @@ client.on('messageCreate', async (message) => {
 
           for (const row of rows) {
             const distance = hammingDistance(hash, row.hash);
-            const threshold = 40;
+            const threshold = 20;
 
             if (distance <= threshold) {
               duplicateFound = true;
               const originalMessageUrl = `https://discord.com/channels/${message.guild.id}/${message.channel.id}/${row.message_id}`;
-              message.channel.send(`# YOU JUST SENT AN IMAGE THAT WAS ALREADY SENT BEFORE
+              message.channel.send(`# YOU JUST SENT AN IMAGE THAT WAS ALREADY SENT BEFORE YOU OLD SENILE FUCK!
                 > Original post: ${originalMessageUrl}`);
               break;
             }
