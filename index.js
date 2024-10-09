@@ -56,7 +56,7 @@ client.on('messageCreate', async (message) => {
 
           for (const row of rows) {
             const distance = hammingDistance(hash, row.hash);
-            const threshold = 40;
+            const threshold = 20;
 
             if (distance <= threshold) {
               duplicateFound = true;
